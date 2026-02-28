@@ -1,0 +1,181 @@
+/*--------------------------------------------------
+  Global Styles
+--------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gradient-start: #141e30;
+    --gradient-end: #243b55;
+    --text-light: #ffffff;
+    --text-dark: #111;
+    --container-width: 90%;
+    --max-width: 1000px;
+    --transition: 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-light);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    line-height: 1.6;
+}
+
+.container {
+    width: var(--container-width);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------
+  Hero Section
+--------------------------------------------------*/
+.section-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.section-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.cta-buttons .btn {
+    margin: 0 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: var(--text-light);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    transition: background var(--transition);
+}
+
+.btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.btn-alt {
+    background: rgba(255,255,255,0.3);
+}
+
+/*--------------------------------------------------
+  Sections
+--------------------------------------------------*/
+.section {
+    padding: 4rem 0;
+}
+
+.skills-grid, .projects-grid {
+    display: grid;
+    grid-gap: 1.5rem;
+}
+
+.skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.skill-card {
+    background: rgba(255,255,255,0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform var(--transition);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-list {
+    list-style: disc inside;
+}
+
+.contact-form label {
+    display: block;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.contact-form button {
+    background: rgba(255,255,255,0.15);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.contact-form button:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/*--------------------------------------------------
+  Responsive tweaks
+--------------------------------------------------*/
+@media (max-width: 768px) {
+    .section-hero h1 {
+        font-size: 2.5rem;
+    }
+    .tagline {
+        font-size: 1rem;
+    }
+}
