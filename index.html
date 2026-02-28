@@ -3,20 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sachin Raghav - AI & ML Engineer | Full Stack Developer | Real-time Portfolio">
+    <meta name="theme-color" content="#1a2a6c">
     <title>Sachin Raghav | AI & ML Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <!-- you can include a Google font if desired -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Particles Background -->
+    <div id="particles-container" class="particles-container"></div>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-laptop-code"></i> Sachin
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn" title="Toggle dark/light mode" aria-label="Toggle dark/light mode"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section id="hero" class="section-hero">
-        <div class="container">
-            <h1>Sachin Raghav</h1>
-            <p class="tagline">AI &amp; ML Engineer | Full Stack Developer</p>
+        <div class="stars"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" id="typing-title"></h1>
+                <p class="tagline" id="typing-tagline"></p>
+                <div class="live-status">
+                    <span class="status-dot"></span>
+                    <span id="live-status-text">Building Advanced Solutions</span>
+                </div>
+            </div>
             <div class="cta-buttons">
-                <a href="#projects" class="btn">View Projects</a>
-                <a href="#contact" class="btn btn-alt">Contact Me</a>
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Contact Me
+                </a>
             </div>
         </div>
     </section>
@@ -24,43 +62,173 @@
     <!-- About Me -->
     <section id="about" class="section">
         <div class="container">
-            <h2>About Me</h2>
-            <p>I hold a B.Tech in Computer Science with a focus on Artificial Intelligence and Machine Learning. My professional journey is driven by a passion for solving real-world problems through intelligent systems and full-stack applications.</p>
-            <h3>Education</h3>
-            <p>B.Tech Computer Science (AI &amp; ML)</p>
-            <h3>Career Objective</h3>
-            <p>To work as an AI/ML engineer and full-stack developer, building scalable and intelligent solutions that have a meaningful impact.</p>
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">I hold a B.Tech in Computer Science with a focus on Artificial Intelligence and Machine Learning. My professional journey is driven by a passion for solving real-world problems through intelligent systems and full-stack applications.</p>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="100">0</div>
+                            <div class="stat-label">Commits</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="8">0</div>
+                            <div class="stat-label">Years</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <p>B.Tech Computer Science (AI &amp; ML)</p>
+                        <span class="batch">2024 Batch</span>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-target"></i> Career Objective</h3>
+                        <p>To work as an AI/ML engineer and full-stack developer, building scalable and intelligent solutions that have a meaningful impact.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section">
         <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <span class="skill-icon">🤖</span>
-                    <h4>Artificial Intelligence</h4>
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>AI &amp; Machine Learning</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">TensorFlow</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PyTorch</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Scikit-learn</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Computer Vision</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="88"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <span class="skill-icon">🧠</span>
-                    <h4>Machine Learning</h4>
+                <div class="skills-category">
+                    <h3>Backend &amp; Tools</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">98%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="98"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-percent">86%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="86"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git &amp; DevOps</span>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="82"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <span class="skill-icon">🐍</span>
-                    <h4>Python</h4>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-icon">🌐</span>
-                    <h4>Web Development</h4>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-icon">💾</span>
-                    <h4>MongoDB</h4>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-icon">⚙️</span>
-                    <h4>Full Stack (HTML/CSS/JS/React/Node)</h4>
+                <div class="skills-category">
+                    <h3>Frontend &amp; Web</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React.js</span>
+                                <span class="skill-percent">89%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="89"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">91%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="91"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percent">94%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="94"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">WebSocket</span>
+                                <span class="skill-percent">87%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="87"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,27 +237,77 @@
     <!-- Projects -->
     <section id="projects" class="section">
         <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-grid" id="projects-grid">
                 <div class="project-card">
-                    <h3>Smart Bargain Bot</h3>
+                    <div class="project-header">
+                        <h3>Smart Bargain Bot</h3>
+                        <span class="project-status live">Live</span>
+                    </div>
                     <p>An AI negotiation system that interacts with users to obtain optimal prices using reinforcement learning.</p>
-                    <p><strong>Stack:</strong> Python, TensorFlow, NLP</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">NLP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
                 </div>
+
                 <div class="project-card">
-                    <h3>Automated Visual Quality Control System</h3>
+                    <div class="project-header">
+                        <h3>Automated Visual Quality Control</h3>
+                        <span class="project-status">Completed</span>
+                    </div>
                     <p>Computer vision solution for detecting defects in manufacturing lines with real-time alerts.</p>
-                    <p><strong>Stack:</strong> OpenCV, Python, Flask</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">OpenCV</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Flask</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
                 </div>
+
                 <div class="project-card">
-                    <h3>Full Stack Web Application</h3>
-                    <p>End-to-end web app with user authentication, CRUD, and responsive UI.</p>
-                    <p><strong>Stack:</strong> React, Node.js, Express, MongoDB</p>
+                    <div class="project-header">
+                        <h3>Full Stack Web Platform</h3>
+                        <span class="project-status live">Live</span>
+                    </div>
+                    <p>End-to-end web app with user authentication, CRUD operations, and responsive UI design.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
                 </div>
+
                 <div class="project-card">
-                    <h3>Machine Learning Case Study</h3>
-                    <p>Analysis and modelling of real-world data to predict outcomes using various ML algorithms.</p>
-                    <p><strong>Stack:</strong> Python, Scikit-learn, Pandas</p>
+                    <div class="project-header">
+                        <h3>ML Predictive Analytics</h3>
+                        <span class="project-status">Completed</span>
+                    </div>
+                    <p>Analysis and modelling of real-world data to predict outcomes using various machine learning algorithms.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Scikit-learn</span>
+                        <span class="tech-badge">Pandas</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,8 +316,11 @@
     <!-- Experience / Achievements -->
     <section id="experience" class="section">
         <div class="container">
-            <h2>Experience &amp; Achievements</h2>
-            <ul class="experience-list">
+            <div class="section-header">
+                <h2 class="section-title">Experience & Achievements</h2>
+                <div class="title-underline"></div>
+            </div>
+            <h2 class="animated-slide-up animated-fade-in">Experience &amp; Achievements</h2>            <ul class="experience-list">
                 <li>Developed multiple AI models for predictive analytics.</li>
                 <li>Built and deployed full-stack applications to production.</li>
                 <li>Presented research at national level tech symposiums.</li>
@@ -107,26 +328,111 @@
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
+    <!-- Live Chat (real-time messages) -->
+    <section id="chat" class="section">
         <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:sachin@example.com">sachin@example.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com" target="_blank">linkedin.com/in/sachin</a></p>
-            <p>GitHub: <a href="https://github.com" target="_blank">github.com/sachin</a></p>
-            <h3>Send a Message</h3>
-            <form class="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn">Send</button>
-            </form>
+            <div class="section-header">
+                <h2 class="section-title">Live Community Chat</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="chat-wrapper">
+                <div id="chat-box" class="chat-box">
+                    <div class="chat-welcome">
+                        <p>Welcome to the community chat! 👋</p>
+                        <small>Real-time messages powered by WebSocket</small>
+                    </div>
+                </div>
+                <form id="chat-form" class="chat-form">
+                    <div class="chat-input-wrapper">
+                        <input id="chat-input" type="text" placeholder="Type your message..." autocomplete="off" maxlength="200" />
+                        <button type="submit" class="chat-send-btn" title="Send message" aria-label="Send chat message">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <small class="chat-info"><span id="online-count">1</span> user online</small>
+                </form>
+            </div>
         </div>
     </section>
 
-<script src="script.js"></script>
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <a href="mailto:sachinthakur28122005@gmail.com">sachinthakur28122005@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <a href="tel:+91234567890">+91 8868090076</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">linkedin.com/in/sachin</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com/sachin</a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <h3>Send Me a Message</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <span class="form-error" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <span class="form-error" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <span class="form-error" id="message-error"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <span class="form-status" id="form-status"></span>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sachin Raghav. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart" class="heart-icon"></i> using HTML, CSS, JavaScript & Node.js</p>
+            <div class="social-links">
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Notification Container -->
+    <div id="notification-container" class="notification-container"></div>
+
+<script src=\"/socket.io/socket.io.js\"></script>
+<script src=\"script.js\"></script>
 </body>
 </html>
